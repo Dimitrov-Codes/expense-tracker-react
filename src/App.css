@@ -32,7 +32,76 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
+.expenses-container {
+  background-color: #1e1d1e;
+  width: 70%;
+  padding: 1.5rem 1rem;
+  margin: 1rem auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.459);
+}
+.expenses-container .fallback-content {
+  color: white;
+  text-align: center;
+}
+
+.form-container {
+  background-color: #9e86ec;
+  max-width: 70%;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.459);
+  padding: 2rem;
+  position: relative;
+}
+
+.form-control {
+  display: inline-block;
+  width: 40%;
+  padding-bottom: 2rem;
+  font-weight: 600;
+  margin-right: 2.3rem;
+
+  /* padding:; */
+}
+
+.form-control input {
+  display: block;
+  padding: 1rem;
+  margin-top: .5rem;
+  width: 100%;
+  min-width: 200px;
+  height: 2.5rem;
+  border-radius: 8px;
+  outline: 0;
+  border: 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.form-controller{
+  display: flex;
+  margin: auto;
+  justify-content:space-evenly;
+  width:50%;
+  /* margin-left: auto;
+  margin-right: 1rem; */
+}
+.form-controller button {
+  background-color: #380054;
+  padding: 1.2rem;
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 8px;
+  border: 0;
+  outline: 0;
+  
+  display: inline-block;
+  /* margin-right: 6rem; */
+}
+
