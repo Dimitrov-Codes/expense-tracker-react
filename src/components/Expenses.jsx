@@ -1,15 +1,14 @@
 import React from "react";
 import ExpenseItem from "./ExpenseItem/ExpenseItem";
 import ExpenseFilter from "./ExpenseFilter/ExpenseFilter";
-
+import Chart from "./Chart/Chart";
 export default function Expenses(props) {
-    let renderContent;
+    let ExpenseList;
     if (props.expenses.length === 0) {
-        renderContent = <h1 className="fallback-content">No expenses found!</h1>
+        ExpenseList = <h1 className="fallback-content">No expenses found!</h1>
     }
     else {
-
-        renderContent = props.expenses.map((i, index) => (
+        ExpenseList = props.expenses.map((i, index) => (
             <ExpenseItem
                 key={index}
                 title={i.title}
@@ -17,10 +16,12 @@ export default function Expenses(props) {
                 date={i.date}
             />))
     }
+
     return (
         <div className='expenses-container'>
+            <Chart expenses={props.expenses}/>
             <ExpenseFilter filterByYear={props.filterByYear} />
-            {renderContent}
+            {ExpenseList}
         </div>
     )
 }
